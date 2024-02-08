@@ -39,17 +39,7 @@ void ft_store_line(t_list *data, char *str)
 
 int main(int argc, char **argv)
 {
-    if (argc == 2)
-    {
-        t_list  data;
-        int i = 0;
-
-        ft_store_line(&data, argv[1]);
-        printf("%d\n", data.height);
-        while (i < 9)
-        {
-            printf("%s\n",data.map[i]);
-            i++;
-        }
-    }
+    (void)argc;
+    (void)argv;
+    return (0);
 }

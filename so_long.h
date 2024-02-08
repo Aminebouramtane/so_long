@@ -16,4 +16,8 @@ typedef struct list
 
 } t_list;
 
+int ft_height(char *str);
+void ft_store_line(t_list *data, char *str);
+
+
 #endif
