@@ -10,6 +10,8 @@ typedef struct list
     void *win;
     char **map;
     char *line;
+    int map_width;
+    int map_height;
     int height;
     int x;
     size_t y;

@@ -37,9 +37,34 @@ void ft_store_line(t_list *data, char *str)
     close(fd);
 }
 
+// void ft_draw(char str,t_list data)
+// {
+//     t_list
+// }
+
 int main(int argc, char **argv)
 {
     (void)argc;
-    (void)argv;
-    return (0);
+    t_list data;
+    int i = 0;
+    size_t j = 0;
+    ft_store_line(&data, argv[1]);
+    data.mlx = mlx_init();
+    data.win = mlx_new_window(data.mlx, 2000, 700, "SO_long");
+    void *img = mlx_xpm_file_to_image(data.mlx, "./ground.xpm", &data.map_width, &data.map_height);
+    while (i < data.height)
+    {
+        j = 0;
+        while (j < ft_strlen(data.map[i]))
+        {
+            if(data.map[i][j] == '1')
+            {
+                mlx_put_image_to_window(data.mlx, data.win, img, j * 40, i * 40);
+            }
+            j++;
+        }
+        printf("%zu\n", ft_strlen(data.map[i]));
+        i++;
+    }  
+    mlx_loop(data.mlx);
 }
