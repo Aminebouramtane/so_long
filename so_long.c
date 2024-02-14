@@ -1,70 +1,51 @@
 #include "so_long.h"
 
-int ft_height(char *str)
+void ft_get_height_of_line(char *str , t_ghlid *data)
 {
-    char *line;
-    int height = 0;
-
-    int fd = open(str, O_RDONLY);
-    line = get_next_line(fd);
-    while (line != NULL)
-    {
-        height++;
-        line = get_next_line(fd);
-    }
-    return (height);
-    close(fd);
-}
-
-void ft_store_line(t_list *data, char *str)
-{
-    char *line;
+    char    *my_line;
     int i;
 
     i = 0;
     int fd = open(str, O_RDONLY);
-    data->height = ft_height(str);
-    data->map = (char **)malloc(data->height * sizeof(char *));
-    if (data->map == NULL)
-        return;
-    line = get_next_line(fd);
-    while (i < data->height)
-    {
-        data->map[i] = line;
-        line = get_next_line(fd);
+    while ((my_line = get_next_line(fd)) != NULL)
         i++;
-    }
     close(fd);
+    data->height = i;
 }
 
-// void ft_draw(char str,t_list data)
-// {
-//     t_list
-// }
-
-int main(int argc, char **argv)
+void    ft_line(char *str , t_ghlid *data)
 {
+	int	i;
+	char	*my_line;
+    int fd;
+	i = 0;
+    fd = open(str, O_RDONLY);
+
+	ft_get_height_of_line(str,data);
+	data->map = (char **)malloc(data->height * sizeof(char *) + 1);
+	while ((my_line = get_next_line(fd)) != NULL)
+	{
+		data->map[i] = my_line;
+		i++;
+	}
+    close(fd);
+    data->width = strlen(data->map[0]);
+}
+
+int main(int argc, char **av)
+{
+    t_ghlid data;
+    data.move = 0;
+	ft_line(av[1] , &data);
     (void)argc;
-    t_list data;
-    int i = 0;
-    size_t j = 0;
-    ft_store_line(&data, argv[1]);
     data.mlx = mlx_init();
-    data.win = mlx_new_window(data.mlx, 2000, 700, "SO_long");
-    void *img = mlx_xpm_file_to_image(data.mlx, "./ground.xpm", &data.map_width, &data.map_height);
-    while (i < data.height)
-    {
-        j = 0;
-        while (j < ft_strlen(data.map[i]))
-        {
-            if(data.map[i][j] == '1')
-            {
-                mlx_put_image_to_window(data.mlx, data.win, img, j * 40, i * 40);
-            }
-            j++;
-        }
-        printf("%zu\n", ft_strlen(data.map[i]));
-        i++;
-    }  
+    data.win = mlx_new_window(data.mlx, (data.width * 20) - 20, data.height * 20, "So_long");
+	ft_draw(&data);
+    ft_position(&data);
+    mlx_hook(data.win, 2, 1L << 0, key_hook, &data);
+    ft_draw(&data);
+    // printf("moves : %d\n", data.move);
+    // system("leaks so_long");
     mlx_loop(data.mlx);
+
 }

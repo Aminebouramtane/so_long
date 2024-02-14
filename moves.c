@@ -9,7 +9,7 @@ void move_player_up(t_ghlid *data)
         data->map[data->player_y][data->player_x] = 'P';
 		data->move++;
 		printf("moves : %d\n", data->move);
-        // system("leaks so_long");
+        system("leaks so_long");
     }
 }
 void move_player_down(t_ghlid *data) {
@@ -20,7 +20,7 @@ void move_player_down(t_ghlid *data) {
         data->map[data->player_y][data->player_x] = 'P';
 		data->move++;
 		printf("moves : %d\n", data->move);
-        // system("leaks so_long");
+        system("leaks so_long");
     }
 }
 void move_player_right(t_ghlid *data) {
@@ -31,7 +31,7 @@ void move_player_right(t_ghlid *data) {
         data->map[data->player_y][data->player_x] = 'P';
 		data->move++;
 		printf("moves : %d\n", data->move);
-        // system("leaks so_long");
+        system("leaks so_long");
     }
 }
 void move_player_left(t_ghlid *data) {
@@ -42,31 +42,35 @@ void move_player_left(t_ghlid *data) {
         data->map[data->player_y][data->player_x] = 'P';
 		data->move++;
 		printf("moves : %d\n", data->move);
-        // system("leaks so_long");
+        system("leaks so_long");
     }
 }
 
 int key_hook(int keycode, t_ghlid *data)
 {
-    if (keycode == 2)
+    if (keycode == 100)
     {
         move_player_right(data);
         ft_draw(data);
+        printf("moved");
     }
-    if (keycode == 13)
+    if (keycode == 119)
     {
         move_player_up(data);
         ft_draw(data);
+        printf("moved");
     }
-    if (keycode == 1)
+    if (keycode == 115)
     {
         move_player_down(data);
         ft_draw(data);
+        printf("moved");
     }
-    if (keycode == 0)
+    if (keycode == 97)
     {
         move_player_left(data);
         ft_draw(data);
+        printf("moved");
     }
     return (0);
 }

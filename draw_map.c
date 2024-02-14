@@ -1,5 +1,4 @@
 #include "so_long.h"
-#include "./get_next_line/get_next_line.h"
 
 void	ft_draw(t_ghlid *data)
 {

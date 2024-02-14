@@ -1,12 +1,8 @@
 NAME = so_long
 
-SRC  = so_long.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+SRC  = so_long.c draw_map.c moves.c positions.c characters.c get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 
-OBJ = $(SRC:%.c=%.o)
-
-CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
