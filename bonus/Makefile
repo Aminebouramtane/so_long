@@ -7,7 +7,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	$(CC) $(OBJ) libmlx.a libmlx_Linux.a -Lmlx_linux -L/usr/X11R6/lib -lXext -lX11 -lm -lz -o so_long
 
 clean:
 	rm -rf $(OBJ)

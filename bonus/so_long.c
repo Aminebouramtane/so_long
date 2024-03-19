@@ -94,7 +94,7 @@ int	main(int argc, char **av)
 	size_y = data.height * 50;
 	data.mlx = mlx_init();
 	data.win = mlx_new_window(data.mlx, size_x, size_y, "So_long");
-	ft_valid_map(&data, av[1]);
+	// ft_valid_map(&data, av[1]);
 	ft_position(&data);
 	mlx_hook(data.win, 2, 1L << 0, key_hook, &data);
 	mlx_loop_hook(data.mlx, ft_draw, &data);

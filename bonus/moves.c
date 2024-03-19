@@ -103,29 +103,29 @@ void	move_player_left(t_ghlid *data)
 	}
 }
 
-int	key_hook(int keycode, t_ghlid *data)
+int key_hook(int keycode, t_ghlid *data)
 {
-	if (keycode == 53)
-		exit(0);
-	if (keycode == 2)
+    if (keycode == 65307)
+        exit(0);
+    else if (keycode == 100)
 	{
-		move_player_right(data);
-		ft_draw(data);
-	}
-	if (keycode == 13)
+        move_player_right(data);
+        ft_draw(data);
+    }
+    else if (keycode == 119)
 	{
-		move_player_up(data);
-		ft_draw(data);
-	}
-	if (keycode == 1)
+        move_player_up(data);
+        ft_draw(data);
+    }
+    else if (keycode == 115)
 	{
-		move_player_down(data);
-		ft_draw(data);
-	}
-	if (keycode == 0)
+        move_player_down(data);
+        ft_draw(data);
+    }
+    else if (keycode == 97)
 	{
-		move_player_left(data);
-		ft_draw(data);
-	}
+        move_player_left(data);
+        ft_draw(data);
+    }
 	return (0);
 }
