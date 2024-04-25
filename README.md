@@ -22,7 +22,7 @@ This project is part of the 42 curriculum, aiming to create a simple 2D game cal
 2. Compile the project:
   "make" for Mandatory part and "make bonus" for bonus part
 3. Run the game:
-   ./so_long [map_file]
+   ```./so_long [map_file]```
 
 ## Usage
 - Use the arrow keys (WASD) to move the player character (up, down, left, right).
