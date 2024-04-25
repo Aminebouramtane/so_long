@@ -6,7 +6,7 @@
 /*   By: abouramt <abouramt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 11:54:00 by abouramt          #+#    #+#             */
-/*   Updated: 2024/04/18 11:25:33 by abouramt         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:33:52 by abouramt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ typedef struct lghlid
 	void	*img;
 	void	*img_d;
 	void	*img_c;
-	void	*img_e;
 	void	*img_g;
 	void	*img_p;
 	int		move;
@@ -48,12 +47,6 @@ typedef struct lghlid
 	int		nb_exit;
 	int		nb_player;
 	int		nb_kurama;
-	int		frame;
-	int		nb_enmy;
-	char	*moves;
-	int		enemy_x;
-	int		enemy_y;
-	int		a;
 }	t_ghlid;
 
 void	ft_get_height_of_line(char *str, t_ghlid *data);
@@ -64,12 +57,10 @@ void	ft_green(t_ghlid *data, int x, int y);
 void	ft_coins(t_ghlid *data, int x, int y);
 void	ft_door(t_ghlid *data, int x, int y);
 void	ft_player(t_ghlid *data, int x, int y);
-void	ft_ennemy(t_ghlid *data, int x, int y);
 void	move_player_up(t_ghlid *data);
 void	move_player_down(t_ghlid *data);
 void	move_player_right(t_ghlid *data);
 void	move_player_left(t_ghlid *data);
-void	flood_fill_c(t_ghlid *data);
 void	flood_fill_e(t_ghlid *data);
 void	ft_map_valid(t_ghlid *data);
 int		key_hook(int keycode, t_ghlid *data);
@@ -88,8 +79,6 @@ void	ft_check_map_botop(t_ghlid *data);
 void	ft_check_sides(t_ghlid *data);
 int		ft_strcmp(char *ptr1, char *ptr2);
 void	check_path(char *av);
-char	*ft_itoa(int n);
-void	ft_position_enemy(t_ghlid *data);
-void	check_images(t_ghlid *data);
 int		key_close(t_ghlid *data);
+
 #endif

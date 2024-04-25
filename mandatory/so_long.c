@@ -6,7 +6,7 @@
 /*   By: abouramt <abouramt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 11:56:19 by abouramt          #+#    #+#             */
-/*   Updated: 2024/04/18 20:39:06 by abouramt         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:46:16 by abouramt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,6 @@ int	main(int argc, char **av)
 	int		size_y;
 
 	data.move = 0;
-	data.frame = 0;
-	data.a = 0;
 	ft_line(av[1], &data);
 	if (argc != 2)
 	{
@@ -96,9 +94,10 @@ int	main(int argc, char **av)
 	data.mlx = mlx_init();
 	data.win = mlx_new_window(data.mlx, size_x, size_y, "So_long");
 	ft_valid_map(&data, av[1]);
+	ft_position(&data);
+	ft_draw(&data);
 	mlx_hook(data.win, 2, 0, key_hook, &data);
 	mlx_hook(data.win, 17, 0, key_close, &data);
-	mlx_loop_hook(data.mlx, ft_draw, &data);
 	mlx_loop(data.mlx);
 	ft_free_map(&data);
 }

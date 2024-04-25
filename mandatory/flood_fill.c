@@ -6,7 +6,7 @@
 /*   By: abouramt <abouramt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 03:39:53 by abouramt          #+#    #+#             */
-/*   Updated: 2024/04/18 11:39:54 by abouramt         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:38:27 by abouramt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ static void	ft_map_chec(t_ghlid *data)
 static void	flood_fill(t_ghlid *data, int x, int y)
 {
 	if (x < 0 || y < 0 || x >= data->width || y >= data->height
-		|| data->map_chec[y][x] == '1' || data->map_chec[y][x] == 'X'
-		|| data->map_chec[y][x] == '2')
+		|| data->map_chec[y][x] == '1' || data->map_chec[y][x] == '2')
 		return ;
 	data->map_chec[y][x] = '2';
 	flood_fill(data, x - 1, y);
