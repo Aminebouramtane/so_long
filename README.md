@@ -17,10 +17,10 @@ This project is part of the 42 curriculum, aiming to create a simple 2D game cal
 
 ## Installation
 1. Clone the repository:
-  -git clone [repository_url]
-  -cd so_long
+  -`git clone [repository_url]`
+  -`cd so_long`
 2. Compile the project:
-  "make" for Mandatory part and "make bonus" for bonus part
+   `make` for Mandatory part and `make bonus` for bonus part
 3. Run the game:
    ```./so_long [map_file]```
 
@@ -31,11 +31,11 @@ This project is part of the 42 curriculum, aiming to create a simple 2D game cal
 - Avoid obstacles and enemies.
 
 ## Example Map Format
-1111111111
-1E01000C01
-1010000111
-1P00100X01
-1111111111
+1111111111<br>
+1E01000C01<br>
+1010000111<br>
+1P00100X01<br>
+1111111111<br>
 
 - `1`: Wall
 - `0`: Empty tile
