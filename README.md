@@ -31,7 +31,6 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 - Avoid obstacles and enemies.
 
 ## Example Map Format
-bash
 ```
 1111111111<br>
 1E01000C01<br>
