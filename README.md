@@ -32,11 +32,11 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 
 ## Example Map Format
 ```
-1111111111<br>
-1E01000C01<br>
-1010000111<br>
-1P00100X01<br>
-1111111111<br>
+1111111111
+1E01000C01
+1010000111
+1P00100X01
+1111111111
 ```
 - `1`: Wall
 - `0`: Empty tile
