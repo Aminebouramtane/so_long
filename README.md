@@ -1,7 +1,7 @@
 # Project `so_long`
 
 ## Description
-This project is part of the 42 curriculum, aiming to create a simple 2D game called `so_long`. The game involves a player character navigating through a map, collecting items, and reaching the exit while avoiding obstacles.
+This project is part of the 1337 curriculum, aiming to create a simple 2D game called `so_long`. The game involves a player character navigating through a map, collecting items, and reaching the exit while avoiding obstacles.
 
 ## Features
 - **Map Parsing**: Parses a map file that represents the game level.
