@@ -41,6 +41,7 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 - `1`: Wall
 - `0`: Empty tile
 - `P`: Player character
+- `X`: Enemy character
 - `C`: Collectible item
 - `E`: Exit tile
 
