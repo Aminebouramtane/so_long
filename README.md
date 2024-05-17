@@ -44,6 +44,7 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 - `X`: Enemy character
 - `C`: Collectible item
 - `E`: Exit tile
+  
 
 ## Credits
 - This project was completed as part of the 42 curriculum.
