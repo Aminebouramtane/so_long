@@ -51,4 +51,3 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 - Created by AmineBOURAMTANE ([GitHub Profile](https://github.com/Aminebouramtane))
 
 
-
