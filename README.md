@@ -17,7 +17,7 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 
 ## Installation
 1. Clone the repository:
-  -`git clone [repository_url]`
+  -`git clone [https://github.com/Aminebouramtane/so_long]`
   -`cd so_long`
 2. Compile the project:
    `make` for Mandatory part and `make bonus` for bonus part
@@ -44,10 +44,6 @@ This project is part of the 1337 curriculum, aiming to create a simple 2D game c
 - `X`: Enemy character
 - `C`: Collectible item
 - `E`: Exit tile
-  
 
-## Credits
-- This project was completed as part of the 42 curriculum.
-- Created by AmineBOURAMTANE ([GitHub Profile](https://github.com/Aminebouramtane))
 
 
